@@ -130,6 +130,10 @@ id: root
 
             anchors.fill: parent
             color: "transparent"
+            anchors.rightMargin: 1
+            anchors.leftMargin: 1
+            anchors.bottomMargin: 1
+            anchors.topMargin: 1
             border.width: vpx(1)
             border.color: "white"
             opacity: 0.1
@@ -159,7 +163,7 @@ id: root
         color: theme.text
         font {
             family: subtitleFont.name
-            pixelSize: vpx(12)
+            pixelSize: vpx(14)
             bold: true
         }
 

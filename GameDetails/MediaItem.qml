@@ -39,7 +39,7 @@ id: root
         visible: selected
         asynchronous: true
 
-        Rectangle {
+        /*Rectangle {
         id: titlecontainer
 
             width: bubbletitle.contentWidth + vpx(20)
@@ -65,7 +65,7 @@ id: root
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
             }
-        }
+        }*/
     }
 
     Image {

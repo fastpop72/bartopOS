@@ -28,7 +28,7 @@ id: root
     onFocusChanged: buttonbar.currentIndex = 0;
 
     function toggleSearch() {
-        searchActive = !searchActive;
+        searchActive = previousScreen();
     }
 
     Item {
@@ -139,7 +139,7 @@ id: root
                         left: parent.left; leftMargin: vpx(11)
                         top: parent.top; topMargin: vpx(10)
                     }
-                    source: "../assets/images/searchicon.svg"
+                    source: "../assets/images/icon_back.svg"
                     opacity: searchbar.selected && !searchActive ? 1 : searchActive ? 0.8 : 0.5
                     asynchronous: true
                 }
@@ -218,6 +218,7 @@ id: root
                     color: theme.text
                     font.family: subtitleFont.name
                     font.pixelSize: vpx(18)
+                    font.bold: true
                     anchors.centerIn: parent
                     elide: Text.ElideRight
                 }
@@ -255,6 +256,7 @@ id: root
                     color: theme.text
                     font.family: subtitleFont.name
                     font.pixelSize: vpx(18)
+                    font.bold: true
                     anchors.centerIn: parent
                     elide: Text.ElideRight
                 }
@@ -293,6 +295,7 @@ id: root
                     color: theme.text
                     font.family: subtitleFont.name
                     font.pixelSize: vpx(18)
+                    font.bold: true
                     anchors.centerIn: parent
                     elide: Text.ElideRight
                 }

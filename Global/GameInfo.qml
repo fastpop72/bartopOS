@@ -73,12 +73,14 @@ id: infocontainer
         Text {
         id: ratingtext
             
-            property real processedRating: gameData ? Math.round(gameData.rating * 100) / 100 : ""
+            property real processedRating: (Math.round(gameData.rating * 100) / 100) * 100;
             width: contentWidth
             height: parent.height
             anchors { left: ratingtitle.right; leftMargin: vpx(5) }
             verticalAlignment: Text.AlignVCenter
-            text: steam ? processedRating*5 : processedRating
+            text: if (processedRating == 0) {"None"
+				  } else {steam ? processedRating*5 : processedRating + "%"
+				  }
             font.pixelSize: vpx(16)
             font.family: subtitleFont.name
             color: theme.text

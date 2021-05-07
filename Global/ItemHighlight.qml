@@ -100,6 +100,10 @@ id: root
     id: videocontainer
 
         anchors.fill: parent
+        anchors.rightMargin: 2
+        anchors.leftMargin: 2
+        anchors.bottomMargin: 2
+        anchors.topMargin: 2
 
         // Video
         Loader {

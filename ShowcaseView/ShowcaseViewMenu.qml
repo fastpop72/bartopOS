@@ -120,7 +120,7 @@ id: root
     
     anchors.fill: parent
 
-    Item {
+    /*Item {
     id: ftueContainer
 
         width: parent.width
@@ -142,14 +142,14 @@ id: root
         }
         Behavior on opacity { PropertyAnimation { duration: 1000; easing.type: Easing.OutQuart; easing.amplitude: 2.0; easing.period: 1.5 } }
 
-        /*Image {
+        Image {
             anchors.fill: parent
             source: "../assets/images/ftueBG01.jpeg"
             sourceSize { width: root.width; height: root.height}
             fillMode: Image.PreserveAspectCrop
             smooth: true
             asynchronous: true
-        }*/
+        }
 
         Rectangle {
             anchors.fill: parent
@@ -203,7 +203,7 @@ id: root
             opacity: 0.5
             visible: false
         }
-    }
+    }*/
 
     Item {
     id: header
@@ -211,7 +211,7 @@ id: root
         width: parent.width
         height: vpx(70)
         z: 10
-        Image {
+        /*Image {
         id: logo
 
             width: vpx(150)
@@ -223,7 +223,7 @@ id: root
             asynchronous: true
             anchors.verticalCenter: parent.verticalCenter
             visible: !ftueContainer.visible
-        }
+        }*/
 
         Rectangle {
         id: settingsbutton
@@ -248,7 +248,8 @@ id: root
                 // Accept
                 if (api.keys.isAccept(event) && !event.isAutoRepeat) {
                     event.accepted = true;
-                    settingsScreen();            
+                    settingsScreen();
+                    mainList.focus = true					
                 }
                 // Back
                 if (api.keys.isCancel(event) && !event.isAutoRepeat) {
@@ -283,7 +284,7 @@ id: root
     ObjectModel {
     id: mainModel
 
-        ListView {
+        /*ListView {
         id: featuredlist
 
             property bool selected: ListView.isCurrentItem
@@ -401,7 +402,7 @@ id: root
                         gameDetails(featuredCollection.currentGame(currentIndex));            
                 }
             }
-        }
+        }*/
         
         // Collections list
         ListView {
@@ -412,6 +413,7 @@ id: root
             focus: selected
             width: root.width
             height: vpx(100) + globalMargin * 2
+            anchors.top: root
             anchors {
                 left: parent.left; leftMargin: globalMargin
                 right: parent.right; rightMargin: globalMargin
@@ -508,6 +510,7 @@ id: root
             }
 
             // List specific input
+            Keys.onUpPressed: settingsbutton.focus = true;
             Keys.onLeftPressed: { sfxNav.play(); decrementCurrentIndex() }
             Keys.onRightPressed: { sfxNav.play(); incrementCurrentIndex() }
             Keys.onPressed: {
@@ -527,11 +530,19 @@ id: root
             property var currentList: list1
             property var collection: collection1
 
-            enabled: collection.enabled
-            visible: collection.enabled
-
-            height: collection.height
-
+            enabled: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {false
+                     } else {collection.enabled
+                     }
+            visible: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {false
+                     } else {collection.enabled
+                     }
+            height: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {vpx(0)
+                    } else {collection.height
+                    }
+            anchors.top: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {parent.bottom
+                    } else {none
+                    }
+                    
             itemWidth: collection.itemWidth
             itemHeight: collection.itemHeight
 
@@ -555,10 +566,15 @@ id: root
             property var currentList: list2
             property var collection: collection2
 
-            enabled: collection.enabled
-            visible: collection.enabled
-
-            height: collection.height
+            enabled: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {false
+                     } else {collection.enabled
+                     }
+            visible: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {false
+                     } else {collection.enabled
+                     }
+            height: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {vpx(0)
+                    } else {collection.height
+                    }
 
             itemWidth: collection.itemWidth
             itemHeight: collection.itemHeight
@@ -583,10 +599,15 @@ id: root
             property var currentList: list3
             property var collection: collection3
 
-            enabled: collection.enabled
-            visible: collection.enabled
-
-            height: collection.height
+            enabled: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {false
+                     } else {collection.enabled
+                     }
+            visible: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {false
+                     } else {collection.enabled
+                     }
+            height: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {vpx(0)
+                    } else {collection.height
+                    }
 
             itemWidth: collection.itemWidth
             itemHeight: collection.itemHeight
@@ -611,10 +632,15 @@ id: root
             property var currentList: list4
             property var collection: collection4
 
-            enabled: collection.enabled
-            visible: collection.enabled
-
-            height: collection.height
+            enabled: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {false
+                     } else {collection.enabled
+                     }
+            visible: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {false
+                     } else {collection.enabled
+                     }
+            height: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {vpx(0)
+                    } else {collection.height
+                    }
 
             itemWidth: collection.itemWidth
             itemHeight: collection.itemHeight
@@ -639,10 +665,15 @@ id: root
             property var currentList: list5
             property var collection: collection5
 
-            enabled: collection.enabled
-            visible: collection.enabled
-
-            height: collection.height
+            enabled: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {false
+                     } else {collection.enabled
+                     }
+            visible: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {false
+                     } else {collection.enabled
+                     }
+            height: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {vpx(0)
+                    } else {collection.height
+                    }
 
             itemWidth: collection.itemWidth
             itemHeight: collection.itemHeight

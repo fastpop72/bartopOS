@@ -478,7 +478,7 @@ id: root
                 }
         }
 
-        Button { 
+        /* Button { 
         id: button2 
 
             icon: "../assets/images/icon_details.svg"
@@ -493,7 +493,7 @@ id: root
                     sfxNav.play();
                     menu.currentIndex = ObjectModel.index;
                 }
-        }
+        }*/
 
         Button { 
         id: button3 

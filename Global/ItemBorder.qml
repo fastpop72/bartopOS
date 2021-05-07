@@ -32,15 +32,16 @@ id: root
         Rectangle {
             anchors.fill: parent
             color: "#fff"
+            // radius: 15.0
             visible: settings.AnimateHighlight === "Yes"
             SequentialAnimation on opacity {
             id: colorAnim
 
                 running: true
                 loops: Animation.Infinite
-                NumberAnimation { to: 1; duration: 200; }
+                NumberAnimation { to: 1; duration: 100; }
                 NumberAnimation { to: 0; duration: 500; }
-                PauseAnimation { duration: 200 }
+                PauseAnimation { duration: 2400 }
             }
         }
     }
@@ -68,9 +69,9 @@ id: root
 
         width: bubbletitle.contentWidth + vpx(20)
         height: bubbletitle.contentHeight + vpx(8)
-        color: theme.secondary
+        color: theme.accent
         anchors {
-            top: border.bottom; topMargin: vpx(7)
+            top: border.bottom; topMargin: vpx(-16)
         }
         anchors.horizontalCenter: parent.horizontalCenter
         radius: height/2

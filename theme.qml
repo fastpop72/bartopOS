@@ -88,7 +88,7 @@ id: root
 
     // Filtering options
     property bool showFavs: false
-    property var sortByFilter: ["sort_title", "lastPlayed", "playCount", "rating"]
+    property var sortByFilter: ["title", "last played", "play count", "rating"]
     property int sortByIndex: 0
     property var orderBy: Qt.AscendingOrder
     property string searchTerm: ""
@@ -125,13 +125,13 @@ id: root
     function launchGame(game) {
         if (game !== null) {
             //if (game.collections.get(0).name === "Steam")
-                launchGameScreen();
+            //  launchGameScreen();
 
             saveCurrentState(game);
             game.launch();
         } else {
             //if (currentGame.collections.get(0).name === "Steam")
-                launchGameScreen();
+            //  launchGameScreen();
 
             saveCurrentState(currentGame);
             currentGame.launch();
@@ -186,14 +186,14 @@ id: root
     // Theme settings
     property var theme: {
         return {
-            main:           "#1d253d",
-            secondary:      "#202a44",
-            accent:         "#f00980",
-            highlight:      "#f00980",
+            main:           "#222222",
+            secondary:      "#333333",
+            accent:         "#e58200",
+            highlight:      "#e58200",
             text:           "#ececec",
-            button:         "#f00980",
-            gradientstart:  "#000d111d",
-            gradientend:    "#FF0d111d"
+            button:         "#e58200",
+            gradientstart:  "#00222222",
+            gradientend:    "#fa222222"
         }
     }
 

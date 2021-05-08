@@ -55,6 +55,10 @@ id: root
             settingName: "Hide button help"
             setting: "No,Yes"
         }
+        ListElement {
+            settingName: "Theme color"
+            setting: "Gray,Blue,Green,Red,Yellow"
+        }
     }
 
     property var generalPage: {

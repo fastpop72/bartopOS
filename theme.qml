@@ -47,6 +47,7 @@ id: root
             AllowThumbVideoAudio:          api.memory.has("Play video thumbnail audio") ? api.memory.get("Play video thumbnail audio") : "No",
             HideLogo:                      api.memory.has("Hide logo when thumbnail video plays") ? api.memory.get("Hide logo when thumbnail video plays") : "No",
             HideButtonHelp:                api.memory.has("Hide button help") ? api.memory.get("Hide button help") : "No",
+            ThemeColor:                    api.memory.has("Theme color") ? api.memory.get("Theme color") : "Gray",
             MouseHover:                    api.memory.has("Enable mouse hover") ? api.memory.get("Enable mouse hover") : "No",
             AlwaysShowTitles:              api.memory.has("Always show titles") ? api.memory.get("Always show titles") : "No",
             AnimateHighlight:              api.memory.has("Animate highlight") ? api.memory.get("Animate highlight") : "No",
@@ -185,15 +186,56 @@ id: root
 
     // Theme settings
     property var theme: {
+        var background =        "#222222";
+        var secondary =         "#333333";
+        var text =              "#ececec";
+        var gradientstart =     "#00222222";
+        var gradientend =       "#fa222222";
+
+        if (settings.ThemeColor === "Gray") {
+            background =        "#222222";
+            secondary =         "#333333";
+            text =              "#ececec";
+            gradientstart =     "#00222222";
+            gradientend =       "#fa222222";
+        }
+        else if (settings.ThemeColor === "Blue") {
+            background =        "#162544";
+            secondary =         "#273655";
+            text =              "#e2ecec";
+            gradientstart =     "#00162544";
+            gradientend =       "#fa162544";
+        }
+        else if (settings.ThemeColor === "Green") {
+            background =        "#213322";
+            secondary =         "#324433";
+            text =              "#e2ece2";
+            gradientstart =     "#00213322";
+            gradientend =       "#fa213322";
+        }
+        else if (settings.ThemeColor === "Red") {
+            background =        "#2b1510";
+            secondary =         "#3c2621";
+            text =              "#ece2ec";
+            gradientstart =     "#002b1510";
+            gradientend =       "#fa2b1510";
+		}
+        else if (settings.ThemeColor === "Yellow") {
+            background =        "#352c0a";
+            secondary =         "#463d1b";
+            text =              "#ecece2";
+            gradientstart =     "#00352c0a";
+            gradientend =       "#fa352c0a";
+        }
         return {
-            main:           "#222222",
-            secondary:      "#333333",
+            main:           background,
+            secondary:      secondary,
             accent:         "#e58200",
             highlight:      "#e58200",
-            text:           "#ececec",
+            text:           text,
             button:         "#e58200",
-            gradientstart:  "#00222222",
-            gradientend:    "#fa222222"
+            gradientstart:  gradientstart,
+            gradientend:    gradientend
         }
     }
 
@@ -464,4 +506,3 @@ id: root
     }
     
 }
-

@@ -121,13 +121,13 @@ id: root
     }
 
     // Mouse/touch functionality
-    MouseArea {
+    /*MouseArea {
         anchors.fill: parent
         hoverEnabled: true
         onEntered: {}
         onExited: {}
         onClicked: close();
-    }
+    }*/
 
     // Input handling
     Keys.onPressed: {

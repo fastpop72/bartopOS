@@ -195,7 +195,7 @@ id: root
             }
 
             // Ascending/descending
-            Item {
+            /*Item {
             id: directionbutton
 
                 property bool selected: ListView.isCurrentItem && root.focus
@@ -230,7 +230,7 @@ id: root
                         toggleOrderBy();
                     }
                 }
-            }
+            }*/
 
             // Order by title
             Item {
@@ -251,7 +251,7 @@ id: root
                 Text {
                 id: ordertitle
                     
-                    text: "By " + sortByFilter[sortByIndex]
+                    text: "by " + sortByFilter[sortByIndex]
                                     
                     color: theme.text
                     font.family: subtitleFont.name

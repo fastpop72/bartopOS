@@ -265,6 +265,7 @@ id: root
                     // Accept
                     if (api.keys.isAccept(event) && !event.isAutoRepeat) {
                         event.accepted = true;
+                        sfxToggle.play();
                         cycleSort();
                     }
                 }
@@ -304,6 +305,7 @@ id: root
                     // Accept
                     if (api.keys.isAccept(event) && !event.isAutoRepeat) {
                         event.accepted = true;
+                        sfxToggle.play();
                         toggleFavs();
                     }
                 }

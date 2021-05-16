@@ -267,6 +267,11 @@ id: root
                         event.accepted = true;
                         sfxToggle.play();
                         cycleSort();
+                        if (sortByIndex == 0) {
+                            orderBy = Qt.AscendingOrder;
+                        } else {
+                        orderBy = Qt.DescendingOrder;
+                        }
                     }
                 }
             }

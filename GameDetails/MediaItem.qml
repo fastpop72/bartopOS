@@ -135,11 +135,11 @@ id: root
     }
 
     // Mouse/touch functionality
-    MouseArea {
+    /*MouseArea {
         anchors.fill: parent
         hoverEnabled: settings.MouseHover == "Yes"
         onEntered: { sfxNav.play(); highlighted(); }
         onExited: {}
         onClicked: activated();
-    }
+    }*/
 }

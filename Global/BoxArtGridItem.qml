@@ -221,7 +221,7 @@ id: root
     }
 
     // Mouse/touch functionality
-    MouseArea {
+    /*MouseArea {
         anchors.fill: parent
         hoverEnabled: settings.MouseHover == "Yes"
         onEntered: { sfxNav.play(); highlighted(); }
@@ -229,7 +229,7 @@ id: root
             sfxNav.play();
             activate();
         }
-    }
+    }*/
     
     /*// Mouse/touch functionality
     MouseArea {

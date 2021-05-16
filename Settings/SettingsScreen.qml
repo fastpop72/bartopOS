@@ -43,10 +43,10 @@ id: root
             settingName: "Animate highlight"
             setting: "No,Yes"
         }
-        ListElement {
+        /*ListElement {
             settingName: "Enable mouse hover"
             setting: "No,Yes"
-        }
+        }*/
         ListElement {
             settingName: "Always show titles"
             setting: "No,Yes"
@@ -245,12 +245,12 @@ id: root
             elide: Text.ElideRight
 
             // Mouse/touch functionality
-            MouseArea {
+            /*MouseArea {
                 anchors.fill: parent
                 onClicked: {
                     previousScreen();
                 }
-            }
+            }*/
         }
     }
 
@@ -296,7 +296,7 @@ id: root
                 }
 
                 // Mouse/touch functionality
-                MouseArea {
+                /*MouseArea {
                     anchors.fill: parent
                     hoverEnabled: settings.MouseHover == "Yes"
                     onEntered: { sfxNav.play(); }
@@ -305,7 +305,7 @@ id: root
                         pagelist.currentIndex = index;
                         settingsList.focus = true;
                     }
-                }
+                }*/
 
             }
         } 
@@ -468,7 +468,7 @@ id: root
                 }
 
                 // Mouse/touch functionality
-                MouseArea {
+                /*MouseArea {
                     anchors.fill: parent
                     hoverEnabled: settings.MouseHover == "Yes"
                     onEntered: { sfxNav.play(); }
@@ -482,7 +482,7 @@ id: root
                             settingsList.currentIndex = index;
                         }
                     }
-                }
+                }*/
             }
         } 
 

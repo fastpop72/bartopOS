@@ -67,11 +67,11 @@ id: root
             source: logobg
             maskSource: platformlogo
             // Mouse/touch functionality
-            /*MouseArea {
+            MouseArea {
                 anchors.fill: parent
                 hoverEnabled: true
                 onClicked: previousScreen();
-            }*/
+            }
         }
 
         // Platform title
@@ -97,11 +97,11 @@ id: root
             visible: platformlogo.status == Image.Error
 
             // Mouse/touch functionality
-            /*MouseArea {
+            MouseArea {
                 anchors.fill: parent
                 hoverEnabled: true
                 onClicked: previousScreen();
-            }*/
+            }
         }
 
         ObjectModel {
@@ -165,7 +165,7 @@ id: root
                 }
 
                 // Mouse/touch functionality
-                /*MouseArea {
+                MouseArea {
                     anchors.fill: parent
                     enabled: !searchActive
                     hoverEnabled: true
@@ -178,7 +178,7 @@ id: root
                             searchInput.selectAll();
                         }
                     }
-                }*/
+                }
 
                 Keys.onPressed: {
                     // Accept

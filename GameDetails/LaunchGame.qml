@@ -157,11 +157,11 @@ id: root
     }
 
     // Mouse/touch functionality
-    /*MouseArea {
+    MouseArea {
         anchors.fill: parent
         hoverEnabled: true
         onClicked: {
             previousScreen();
         }
-    }*/
+    }
 }

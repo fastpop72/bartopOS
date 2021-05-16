@@ -134,7 +134,7 @@ id: root
                 }
 
                 // Mouse/touch functionality
-                /*MouseArea {
+                MouseArea {
                     anchors.fill: parent
                     onClicked: {
                         if (selected)
@@ -142,7 +142,7 @@ id: root
                         else
                             softwarelist.currentIndex = index
                     }
-                }*/
+                }
             }
         }
     }

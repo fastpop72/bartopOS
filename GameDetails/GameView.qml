@@ -417,11 +417,11 @@ id: root
             maskSource: platformlogo
             
             // Mouse/touch functionality
-            /*MouseArea {
+            MouseArea {
                 anchors.fill: parent
                 hoverEnabled: settings.MouseHover == "Yes"
                 onClicked: previousScreen();
-            }*/
+            }
         }
 
         // Platform title
@@ -447,11 +447,11 @@ id: root
             visible: platformlogo.status == Image.Error
 
             // Mouse/touch functionality
-            /*MouseArea {
+            MouseArea {
                 anchors.fill: parent
                 hoverEnabled: settings.MouseHover == "Yes"
                 onClicked: previousScreen();
-            }*/
+            }
         }
         z: 10
     }

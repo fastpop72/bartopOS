@@ -266,13 +266,13 @@ id: root
                 }
             }
             // Mouse/touch functionality
-            /*MouseArea {
+            MouseArea {
                 anchors.fill: parent
                 hoverEnabled: settings.MouseHover == "Yes"
                 onEntered: settingsbutton.focus = true;
                 onExited: settingsbutton.focus = false;
                 onClicked: settingsScreen();
-            }*/
+            }
         }
 
         Image {
@@ -498,7 +498,7 @@ id: root
                 }
                 
                 // Mouse/touch functionality
-                /*MouseArea {
+                MouseArea {
                     anchors.fill: parent
                     hoverEnabled: settings.MouseHover == "Yes"
                     onEntered: { sfxNav.play(); mainList.currentIndex = platformlist.ObjectModel.index; platformlist.savedIndex = index; platformlist.currentIndex = index; }
@@ -514,7 +514,7 @@ id: root
                         }
                         
                     }
-                }*/
+                }
             }
 
             // List specific input

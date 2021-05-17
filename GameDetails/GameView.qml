@@ -650,7 +650,7 @@ id: root
         Keys.onUpPressed: { sfxNav.play(); decrementCurrentIndex() }
         Keys.onDownPressed: { sfxNav.play(); incrementCurrentIndex() }
 		
-		MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: content; }
+		MouseArea { width: root.width ; height: root.height ; onWheel: {} drag.target: content; }
 		
     }
 

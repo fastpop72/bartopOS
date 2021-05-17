@@ -475,6 +475,14 @@ id: root
             name: "View details"
             button: "accept"
         }
+        ListElement {
+            name: "Previous letter"
+            button: "pageUp"
+        }
+        ListElement {
+            name: "Next letter"
+            button: "pageDown"
+        }
     }
 
     onFocusChanged: {

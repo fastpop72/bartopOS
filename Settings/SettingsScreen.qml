@@ -56,6 +56,10 @@ id: root
             setting: "No,Yes"
         }
         ListElement {
+            settingName: "Help buttons style"
+            setting: "Gamepad,Arcade"
+        }
+        ListElement {
             settingName: "Theme color"
             setting: "Gray,Blue,Green,Red,Yellow"
         }

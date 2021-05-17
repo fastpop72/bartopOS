@@ -547,10 +547,8 @@ id: root
             height: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {vpx(0)
                     } else {collection.height
                     }
-            anchors.top: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {parent.bottom
-                    } else {none
-                    }
-                    
+            anchors.top: if (collection.title == "Favorite Games" && featuredCollection.games.count == 0) {parent.bottom}
+	                        
             itemWidth: collection.itemWidth
             itemHeight: collection.itemHeight
 

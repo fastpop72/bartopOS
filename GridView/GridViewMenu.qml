@@ -195,7 +195,11 @@ id: root
             right:  parent.right
         }
         height: vpx(75)
-        color: theme.main
+        //color: theme.main
+        gradient: Gradient {
+                      GradientStop { position: 0.1; color: theme.main }
+                      GradientStop { position: 1.0; color: "transparent" }
+                  }  
         z: 5
 
         HeaderBar {

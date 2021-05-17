@@ -344,7 +344,11 @@ id: root
     id: background
         
         anchors.fill: parent
-        color: theme.main
+        //color: theme.main
+        gradient: Gradient {
+                      GradientStop { position: 0.2; color: theme.main }
+                      GradientStop { position: 1.0; color: "#000000" }
+                  }  
     }
 
     Loader  {

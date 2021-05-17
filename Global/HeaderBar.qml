@@ -330,7 +330,7 @@ id: root
                 right: parent.right; rightMargin: globalMargin
                 left: parent.left; top: parent.top; topMargin: vpx(15)
             }
-            
+            Keys.onPressed: { sfxNav.play() }            
         }
         
     }

@@ -120,13 +120,13 @@ id: root
     
     anchors.fill: parent
 
-    Image {
+    /*Image {
         source: "../assets/images/background-gradient.png"
         sourceSize { width: root.width; height: root.height}
         fillMode: Image.PreserveAspectCrop
         smooth: true
         asynchronous: true
-    }
+    }*/
     
     /*Item {
     id: ftueContainer

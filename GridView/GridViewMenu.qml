@@ -139,13 +139,13 @@ id: root
     property int numColumns: settings.GridColumns ? settings.GridColumns : 6
     property int titleMargin: settings.AlwaysShowTitles === "Yes" ? vpx(30) : 0
 
-    Image {
+    /*Image {
         source: "../assets/images/background-gradient.png"
         sourceSize { width: root.width; height: root.height}
         fillMode: Image.PreserveAspectCrop
         smooth: true
         asynchronous: true
-    }
+    }*/
     
     GridSpacer {
     id: fakebox

@@ -731,7 +731,10 @@ id: root
                 incrementCurrentIndex();
             } while (!currentItem.enabled);
         }
-    }
+    
+	MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: mainList; }
+	
+	}
 
     // Global input handling for the screen
     Keys.onPressed: {

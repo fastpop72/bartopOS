@@ -649,6 +649,9 @@ id: root
         keyNavigationWraps: true
         Keys.onUpPressed: { sfxNav.play(); decrementCurrentIndex() }
         Keys.onDownPressed: { sfxNav.play(); incrementCurrentIndex() }
+		
+		MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: content; }
+		
     }
 
     MediaView {

@@ -352,7 +352,9 @@ id: root
             Keys.onRightPressed:    { sfxNav.play(); moveCurrentIndexRight() }
         }
 
-    }
+    MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: gridContainer; }
+
+	}
 
     Keys.onReleased: {
         // Scroll Down

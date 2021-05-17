@@ -175,7 +175,7 @@ id: root
             setting: "Show,Text only,Hide"
         }
         ListElement {
-            settingName: "Default to full details"
+            settingName: "Full details view"
             setting: "No,Yes"
         }
         ListElement {
@@ -325,6 +325,8 @@ id: root
                 previousScreen();
             }
         }
+		
+		MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: pagelist; }
 
     }
 
@@ -488,6 +490,9 @@ id: root
 
         Keys.onUpPressed: { sfxNav.play(); decrementCurrentIndex() }
         Keys.onDownPressed: { sfxNav.play(); incrementCurrentIndex() }
+		
+		MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: settingsList; }
+		
     }
 
     // Helpbar buttons

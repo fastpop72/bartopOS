@@ -143,7 +143,9 @@ id: root
         }
     }
 
-    // Helpbar buttons
+    MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: root; }
+	
+	// Helpbar buttons
     ListModel {
         id: mediaviewHelpModel
 

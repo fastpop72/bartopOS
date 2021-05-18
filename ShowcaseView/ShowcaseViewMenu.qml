@@ -288,6 +288,19 @@ id: root
         }
     }
 
+    Rectangle {
+    id: footer
+
+        height: vpx(200)
+        anchors { bottom: parent.bottom; left: parent.left; right: parent.right }
+        gradient: Gradient {
+                      GradientStop { position: 0.0; color: "transparent" }
+                      GradientStop { position: 1.0; color: "black" }
+                  }
+        visible: settings.HideButtonHelp === "No"
+        z: 5
+    }
+
     // Using an object model to build the list
     ObjectModel {
     id: mainModel

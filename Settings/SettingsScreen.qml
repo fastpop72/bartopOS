@@ -61,7 +61,7 @@ id: root
         }
         ListElement {
             settingName: "Theme color"
-            setting: "Gray,Blue,Green,Red,Yellow"
+            setting: "Blue,Gray,Green,Red,Yellow"
         }
     }
 

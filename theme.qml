@@ -48,7 +48,7 @@ id: root
             HideLogo:                      api.memory.has("Hide logo when thumbnail video plays") ? api.memory.get("Hide logo when thumbnail video plays") : "No",
             HideButtonHelp:                api.memory.has("Hide button help") ? api.memory.get("Hide button help") : "No",
             HelpButtonsStyle:              api.memory.has("Help buttons style") ? api.memory.get("Help buttons style") : "Gamepad",
-            ThemeColor:                    api.memory.has("Theme color") ? api.memory.get("Theme color") : "Gray",
+            ThemeColor:                    api.memory.has("Theme color") ? api.memory.get("Theme color") : "Blue",
             MouseHover:                    api.memory.has("Enable mouse hover") ? api.memory.get("Enable mouse hover") : "No",
             AlwaysShowTitles:              api.memory.has("Always show titles") ? api.memory.get("Always show titles") : "No",
             AnimateHighlight:              api.memory.has("Animate highlight") ? api.memory.get("Animate highlight") : "No",
@@ -187,25 +187,25 @@ id: root
 
     // Theme settings
     property var theme: {
-        var background =        "#606060";
-        var secondary =         "#4c4c4c";
+        var background =        "#1d253d";
+        var secondary =         "#181f33";
         var text =              "#ececec";
-        var gradientstart =     "#00606060";
-        var gradientend =       "#fa606060";
+        var gradientstart =     "#001d253d";
+        var gradientend =       "#fa1d253d";
 
-        if (settings.ThemeColor === "Gray") {
-            background =        "#606060";
-            secondary =         "#4c4c4c";
-            text =              "#ececec";
-            gradientstart =     "#00606060";
-            gradientend =       "#fa606060";
-        }
-        else if (settings.ThemeColor === "Blue") {
+        if (settings.ThemeColor === "Blue") {
             background =        "#1d253d";
             secondary =         "#181f33";
             text =              "#ececec";
             gradientstart =     "#001d253d";
             gradientend =       "#fa1d253d";
+        }
+        else if (settings.ThemeColor === "Gray") {
+            background =        "#606060";
+            secondary =         "#4c4c4c";
+            text =              "#ececec";
+            gradientstart =     "#00606060";
+            gradientend =       "#fa606060";
         }
         else if (settings.ThemeColor === "Green") {
             background =        "#3e6b4f";

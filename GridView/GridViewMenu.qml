@@ -475,6 +475,27 @@ id: root
             name: "View details"
             button: "accept"
         }
+    }
+
+    ListModel {
+        id: titlegridviewHelpModel
+
+        ListElement {
+            name: "Back"
+            button: "cancel"
+        }
+        ListElement {
+            name: "Toggle favorite"
+            button: "details"
+        }
+        ListElement {
+            name: "Filters"
+            button: "filters"
+        }
+        ListElement {
+            name: "View details"
+            button: "accept"
+        }
         ListElement {
             name: "Previous letter"
             button: "pageUp"
@@ -487,7 +508,7 @@ id: root
 
     onFocusChanged: {
         if (focus) {
-            currentHelpbarModel = gridviewHelpModel;
+            if (sortByIndex == 0) { currentHelpbarModel = titlegridviewHelpModel; } else { currentHelpbarModel = gridviewHelpModel; }
             gamegrid.focus = true;
         }
     }

@@ -526,6 +526,8 @@ id: root
                 if (api.keys.isAccept(event) && !event.isAutoRepeat) {
                     event.accepted = true;
                     currentCollectionIndex = platformlist.currentIndex;
+                    sortByIndex = 0;
+                    orderBy = Qt.AscendingOrder;
                     softwareScreen();            
                 }
             }

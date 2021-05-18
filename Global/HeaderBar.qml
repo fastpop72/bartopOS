@@ -267,14 +267,11 @@ id: root
                         event.accepted = true;
                         sfxToggle.play();
                         cycleSort();
-                        if (sortByIndex == 0) {
-                            gridviewHelpModel.set(4, {"name": "Previous letter", "button": "pageUp"}); gridviewHelpModel.set(5, {"name": "Next letter", "button": "pageDown"});}
-                        else {
-                            gridviewHelpModel.remove(4,2);}
                         if (sortByIndex == 3) {
-                            orderBy = Qt.DescendingOrder;}
-                        else {
-                            orderBy = Qt.AscendingOrder;}
+                            orderBy = Qt.DescendingOrder;
+                        } else {
+                        orderBy = Qt.AscendingOrder;
+                        }
                     }
                 }
             }

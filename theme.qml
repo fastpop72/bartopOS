@@ -187,46 +187,46 @@ id: root
 
     // Theme settings
     property var theme: {
-        var background =        "#222222";
-        var secondary =         "#333333";
+        var background =        "#606060";
+        var secondary =         "#4c4c4c";
         var text =              "#ececec";
-        var gradientstart =     "#00222222";
-        var gradientend =       "#fa222222";
+        var gradientstart =     "#00606060";
+        var gradientend =       "#fa606060";
 
         if (settings.ThemeColor === "Gray") {
-            background =        "#222222";
-            secondary =         "#333333";
+            background =        "#606060";
+            secondary =         "#4c4c4c";
             text =              "#ececec";
-            gradientstart =     "#00222222";
-            gradientend =       "#fa222222";
+            gradientstart =     "#00606060";
+            gradientend =       "#fa606060";
         }
         else if (settings.ThemeColor === "Blue") {
-            background =        "#162544";
-            secondary =         "#273655";
-            text =              "#e2ecec";
-            gradientstart =     "#00162544";
-            gradientend =       "#fa162544";
+            background =        "#1d253d";
+            secondary =         "#181f33";
+            text =              "#ececec";
+            gradientstart =     "#001d253d";
+            gradientend =       "#fa1d253d";
         }
         else if (settings.ThemeColor === "Green") {
-            background =        "#213322";
-            secondary =         "#324433";
-            text =              "#e2ece2";
-            gradientstart =     "#00213322";
-            gradientend =       "#fa213322";
+            background =        "#3e6b4f";
+            secondary =         "#365e45";
+            text =              "#ececec";
+            gradientstart =     "#003e6b4f";
+            gradientend =       "#fa3e6b4f";
         }
         else if (settings.ThemeColor === "Red") {
-            background =        "#2b1510";
-            secondary =         "#3c2621";
-            text =              "#ece2ec";
-            gradientstart =     "#002b1510";
-            gradientend =       "#fa2b1510";
+            background =        "#873036";
+            secondary =         "#772b32";
+            text =              "#ececec";
+            gradientstart =     "#00873036";
+            gradientend =       "#fa873036";
 		}
         else if (settings.ThemeColor === "Yellow") {
-            background =        "#352c0a";
-            secondary =         "#463d1b";
-            text =              "#ecece2";
-            gradientstart =     "#00352c0a";
-            gradientend =       "#fa352c0a";
+            background =        "#a87e00";
+            secondary =         "#9b7700";
+            text =              "#ececec";
+            gradientstart =     "#00a87e00";
+            gradientend =       "#faa87e00";
         }
         return {
             main:           background,

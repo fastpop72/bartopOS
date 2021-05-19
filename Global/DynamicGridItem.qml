@@ -91,7 +91,7 @@ id: root
         id: screenshot
 
             anchors.fill: parent
-            anchors.margins: vpx(2)
+            anchors.margins: vpx(3)
             source: modelData ? modelData.assets.screenshots[0] || modelData.assets.background || "" : ""
             fillMode: Image.PreserveAspectCrop
             sourceSize: Qt.size(screenshot.width, screenshot.height)

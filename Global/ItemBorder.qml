@@ -51,7 +51,7 @@ id: root
 
         anchors.fill: parent
         source: "../assets/images/borderimage.gif"
-        border { left: vpx(5); right: vpx(5); top: vpx(5); bottom: vpx(5);}
+        border { left: vpx(10); right: vpx(10); top: vpx(10); bottom: vpx(10);}
         smooth: false
         visible: false
         asynchronous: true

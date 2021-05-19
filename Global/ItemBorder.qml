@@ -32,16 +32,15 @@ id: root
         Rectangle {
             anchors.fill: parent
             color: "#fff"
-            // radius: 15.0
             visible: settings.AnimateHighlight === "Yes"
             SequentialAnimation on opacity {
             id: colorAnim
 
                 running: true
                 loops: Animation.Infinite
-                NumberAnimation { to: 1; duration: 100; }
+                NumberAnimation { to: 1; duration: 200; }
                 NumberAnimation { to: 0; duration: 500; }
-                PauseAnimation { duration: 2400 }
+                PauseAnimation { duration: 200 }
             }
         }
     }
@@ -78,6 +77,22 @@ id: root
         opacity: selected ? 1 : 0
         Behavior on opacity { NumberAnimation { duration: 100 } }
         visible: opacity !== 0
+
+        Rectangle {
+            anchors.fill: parent
+            color: "#fff"
+            radius: height/2
+            visible: settings.AnimateHighlight === "Yes"
+            SequentialAnimation on opacity {
+            id: bubblecolorAnim
+
+                running: true
+                loops: Animation.Infinite
+                NumberAnimation { to: 1; duration: 200; }
+                NumberAnimation { to: 0; duration: 500; }
+                PauseAnimation { duration: 200 }
+            }
+        }
 
         Text {
         id: bubbletitle

@@ -33,14 +33,15 @@ id: root
             anchors.fill: parent
             color: "#fff"
             visible: settings.AnimateHighlight === "Yes"
+            opacity: 0
             SequentialAnimation on opacity {
             id: colorAnim
 
                 running: true
                 loops: Animation.Infinite
+                PauseAnimation { duration: 400 }
                 NumberAnimation { to: 1; duration: 200; }
                 NumberAnimation { to: 0; duration: 500; }
-                PauseAnimation { duration: 200 }
             }
         }
     }
@@ -83,14 +84,15 @@ id: root
             color: "#fff"
             radius: height/2
             visible: settings.AnimateHighlight === "Yes"
+            opacity: 0
             SequentialAnimation on opacity {
             id: bubblecolorAnim
 
                 running: true
                 loops: Animation.Infinite
+                PauseAnimation { duration: 400 }
                 NumberAnimation { to: 1; duration: 200; }
                 NumberAnimation { to: 0; duration: 500; }
-                PauseAnimation { duration: 200 }
             }
         }
 

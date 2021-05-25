@@ -194,7 +194,7 @@ id: root
             left:   parent.left
             right:  parent.right
         }
-        height: vpx(75)
+        height: vpx(100)
         //color: theme.main
         gradient: Gradient {
                       GradientStop { position: 0.1; color: theme.main }

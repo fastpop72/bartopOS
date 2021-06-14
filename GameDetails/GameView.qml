@@ -259,7 +259,8 @@ id: root
 
         anchors { 
             top: parent.top; //topMargin: vpx(70)
-            left: parent.left; leftMargin: vpx(70)
+            left: parent.left; leftMargin: vpx(300)
+            right: parent.right; rightMargin: vpx(300)
         }
         width: vpx(500)
         height: vpx(450) + header.height
@@ -396,7 +397,7 @@ id: root
             left: parent.left; 
             right: parent.right
         }
-        height: vpx(75)
+        height: vpx(100)
 
         // Platform logo
         Image {

@@ -156,12 +156,53 @@ id: infocontainer
 
             anchors { 
                 left: genretitle.right; leftMargin: vpx(5)
-                right: parent.right
                 top: parent.top
                 bottom: parent.bottom
             }
             verticalAlignment: Text.AlignVCenter
             text: gameData ? gameData.genre : ""
+            font.pixelSize: vpx(16)
+            font.family: subtitleFont.name
+            color: theme.text
+        }
+		
+        Rectangle {
+        id: divider3
+            width: vpx(2)
+            anchors {
+                left: genretext.right; leftMargin: (25)
+                top: parent.top; topMargin: vpx(10)
+                bottom: parent.bottom; bottomMargin: vpx(10)
+            }
+            opacity: 0.2
+        }
+
+        // Publisher box
+        Text {
+        id: publishertitle
+
+            width: contentWidth
+            height: parent.height
+            anchors { left: divider3.right; leftMargin: vpx(25) }
+            verticalAlignment: Text.AlignVCenter
+            text: "Publisher: "
+            font.pixelSize: vpx(16)
+            font.family: subtitleFont.name
+            font.bold: true
+            color: theme.accent
+        }
+
+        Text {
+        id: publishertext
+
+            anchors { 
+                left: publishertitle.right; leftMargin: vpx(5)
+                right: parent.right
+                top: parent.top
+                bottom: parent.bottom
+            }
+            verticalAlignment: Text.AlignVCenter
+            text: gameData ? gameData.publisher : ""
             font.pixelSize: vpx(16)
             font.family: subtitleFont.name
             elide: Text.ElideRight

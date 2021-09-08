@@ -417,6 +417,7 @@ id: root
         if (api.keys.isFilters(event) && !event.isAutoRepeat) {
             event.accepted = true;
             sfxToggle.play();
+	    gamegrid.currentIndex = 0;
             cycleSort();
             if (sortByIndex == 0) {
                 gridviewHelpModel.set(4, {"name": "Previous letter", "button": "pageUp"});

@@ -55,15 +55,15 @@ id: infocontainer
             right: parent.right
         }
 
-        // Rating box
+        // Publisher box
         Text {
-        id: ratingtitle
+        id: publishertitle
 
             width: contentWidth
             height: parent.height
             anchors { left: parent.left; }
             verticalAlignment: Text.AlignVCenter
-            text: "Rating: "
+            text: "Publisher: "
             font.pixelSize: vpx(16)
             font.family: subtitleFont.name
             font.bold: true
@@ -71,16 +71,15 @@ id: infocontainer
         }
 
         Text {
-        id: ratingtext
-            
-            property real processedRating: (Math.round(gameData.rating * 100) / 100) * 100;
-            width: contentWidth
-            height: parent.height
-            anchors { left: ratingtitle.right; leftMargin: vpx(5) }
+        id: publishertext
+
+            anchors { 
+                left: publishertitle.right; leftMargin: vpx(5)
+                top: parent.top
+                bottom: parent.bottom
+            }
             verticalAlignment: Text.AlignVCenter
-            text: if (processedRating == 0) {"None"
-				  } else {steam ? processedRating*5 : processedRating + "%"
-				  }
+            text: gameData ? gameData.publisher : ""
             font.pixelSize: vpx(16)
             font.family: subtitleFont.name
             color: theme.text
@@ -90,7 +89,7 @@ id: infocontainer
         id: divider1
             width: vpx(2)
             anchors {
-                left: ratingtext.right; leftMargin: (25)
+                left: publishertext.right; leftMargin: (15)
                 top: parent.top; topMargin: vpx(10)
                 bottom: parent.bottom; bottomMargin: vpx(10)
             }
@@ -103,7 +102,7 @@ id: infocontainer
 
             width: contentWidth
             height: parent.height
-            anchors { left: divider1.right; leftMargin: vpx(25) }
+            anchors { left: divider1.right; leftMargin: vpx(15) }
             verticalAlignment: Text.AlignVCenter
             text: "Players: "
             font.pixelSize: vpx(16)
@@ -129,7 +128,7 @@ id: infocontainer
         id: divider2
             width: vpx(2)
             anchors {
-                left: playerstext.right; leftMargin: (25)
+                left: playerstext.right; leftMargin: (15)
                 top: parent.top; topMargin: vpx(10)
                 bottom: parent.bottom; bottomMargin: vpx(10)
             }
@@ -142,7 +141,7 @@ id: infocontainer
 
             width: contentWidth
             height: parent.height
-            anchors { left: divider2.right; leftMargin: vpx(25) }
+            anchors { left: divider2.right; leftMargin: vpx(15) }
             verticalAlignment: Text.AlignVCenter
             text: "Genre: "
             font.pixelSize: vpx(16)
@@ -170,22 +169,22 @@ id: infocontainer
         id: divider3
             width: vpx(2)
             anchors {
-                left: genretext.right; leftMargin: (25)
+                left: genretext.right; leftMargin: (15)
                 top: parent.top; topMargin: vpx(10)
                 bottom: parent.bottom; bottomMargin: vpx(10)
             }
             opacity: 0.2
         }
 
-        // Publisher box
+        // Rating box
         Text {
-        id: publishertitle
+        id: ratingtitle
 
             width: contentWidth
             height: parent.height
-            anchors { left: divider3.right; leftMargin: vpx(25) }
+            anchors { left: divider3.right; leftMargin: vpx(15) }
             verticalAlignment: Text.AlignVCenter
-            text: "Publisher: "
+            text: "Rating: "
             font.pixelSize: vpx(16)
             font.family: subtitleFont.name
             font.bold: true
@@ -193,19 +192,18 @@ id: infocontainer
         }
 
         Text {
-        id: publishertext
-
-            anchors { 
-                left: publishertitle.right; leftMargin: vpx(5)
-                right: parent.right
-                top: parent.top
-                bottom: parent.bottom
-            }
+        id: ratingtext
+            
+            property real processedRating: (Math.round(gameData.rating * 100) / 100) * 100;
+            width: contentWidth
+            height: parent.height
+            anchors { left: ratingtitle.right; leftMargin: vpx(5) }
             verticalAlignment: Text.AlignVCenter
-            text: gameData ? gameData.publisher : ""
+            text: if (processedRating == 0) {"None"
+				  } else {steam ? processedRating*5 : processedRating + "%"
+				  }
             font.pixelSize: vpx(16)
             font.family: subtitleFont.name
-            elide: Text.ElideRight
             color: theme.text
         }
     }

@@ -132,7 +132,7 @@ id: root
     Timer {
     id: videoDelay
 
-        interval: 1000
+        interval: 200
         onTriggered: {
             if (game && game.assets.videos.length && canPlayVideo) {
                 videoPreviewLoader.sourceComponent = videoPreviewWrapper;
@@ -145,7 +145,7 @@ id: root
     Timer {
     id: fadescreenshot
 
-        interval: 1000
+        interval: 200
         onTriggered: {
             screenshot.opacity = 0;
             if (blurBG)
@@ -156,7 +156,7 @@ id: root
     Timer {
     id: stopvideo
 
-        interval: 1000
+        interval: 200
         onTriggered: {
             videoPreviewLoader.sourceComponent = undefined;
             videoDelay.stop();
@@ -277,13 +277,13 @@ id: root
     id: logoshadow
 
         anchors.fill: logo
-        horizontalOffset: 0
-        verticalOffset: 0
-        radius: 8.0
+        horizontalOffset: 8
+        verticalOffset: 15
+        radius: 0.5
         samples: 12
         color: "#000000"
         source: logo
-        opacity: (content.currentIndex !== 0 || detailsScreen.opacity !== 0) ? 0 : 0.4
+        opacity: (content.currentIndex !== 0 || detailsScreen.opacity !== 0) ? 0 : 0.7
         Behavior on opacity { NumberAnimation { duration: 200 } }
         visible: settings.GameLogo === "Show"
     }
@@ -296,7 +296,7 @@ id: root
         
         anchors {
             top:    logo.top;
-            left:   logo.left;//    leftMargin: globalMargin
+            left:   parent.left;
             right:  parent.right;
             bottom: logo.bottom
         }
@@ -305,13 +305,43 @@ id: root
         font.family: titleFont.name
         font.pixelSize: vpx(80)
         font.bold: true
-        horizontalAlignment: Text.AlignHLeft
+	horizontalAlignment: Text.AlignHCenter
+	font.capitalization: Font.AllUppercase
         verticalAlignment: Text.AlignVCenter
         elide: Text.ElideRight
         wrapMode: Text.WordWrap
         lineHeight: 0.8
         visible: logo.source === "" || settings.GameLogo === "Text only"
         opacity: (content.currentIndex !== 0 || detailsScreen.opacity !== 0) ? 0 : 1
+        z: (content.currentIndex == 0) ? 10 : -10
+    }
+		
+    Text {
+    id: gametitleshadow
+
+        text: game.title
+        
+        anchors {
+            top: gametitle.top;
+            left:   gametitle.left;
+            right:  parent.right;
+            bottom: gametitle.bottom;
+	    topMargin:  10;
+            leftMargin: 5
+        }
+
+        color: "#000000"
+        font.family: titleFont.name
+        font.pixelSize: vpx(80)
+        font.bold: true
+	font.capitalization: Font.AllUppercase
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
+        elide: Text.ElideRight
+        wrapMode: Text.WordWrap
+        lineHeight: 0.8
+        visible: logo.source === "" || settings.GameLogo === "Text only"
+        opacity: (content.currentIndex !== 0 || detailsScreen.opacity !== 0) ? 0 : 0.7
     }
 
     // Gradient
@@ -354,7 +384,7 @@ id: root
         Rectangle {
             anchors.fill: parent
             color: theme.main
-            opacity: 0.7
+            opacity: 0.9
         }
 
         Item {

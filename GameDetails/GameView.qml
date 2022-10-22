@@ -449,7 +449,7 @@ id: root
             }
             fillMode: Image.PreserveAspectFit
             source: "../assets/images/logospng/" + Utils.processPlatformName(game.collections.get(0).shortName) + ".png"
-            sourceSize: Qt.size(width, height)
+            sourceSize.height: header.height
             smooth: true
             visible: false
             asynchronous: true           
@@ -694,7 +694,7 @@ id: root
         Keys.onUpPressed: { sfxNav.play(); decrementCurrentIndex() }
         Keys.onDownPressed: { sfxNav.play(); incrementCurrentIndex() }
 		
-		MouseArea { width: root.width ; height: root.height ; onWheel: {} drag.target: content; }
+		// MouseArea { width: root.width ; height: root.height ; onWheel: {} drag.target: content; }
 		
     }
 

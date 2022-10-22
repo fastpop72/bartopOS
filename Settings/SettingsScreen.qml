@@ -334,7 +334,7 @@ id: root
             }
         }
 		
-		MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: pagelist; }
+		// MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: pagelist; }
 
     }
 
@@ -499,7 +499,7 @@ id: root
         Keys.onUpPressed: { sfxNav.play(); decrementCurrentIndex() }
         Keys.onDownPressed: { sfxNav.play(); incrementCurrentIndex() }
 		
-		MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: settingsList; }
+		// MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: settingsList; }
 		
     }
 

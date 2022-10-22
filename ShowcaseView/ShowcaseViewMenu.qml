@@ -434,7 +434,7 @@ id: root
             focus: selected
             width: root.width
             height: vpx(100) + globalMargin * 2
-            anchors.top: root
+            anchors.top: mainModel.bottom
             anchors {
                 left: parent.left; leftMargin: globalMargin
                 right: parent.right; rightMargin: globalMargin
@@ -743,7 +743,7 @@ id: root
             } while (!currentItem.enabled);
         }
     
-	MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: mainList; }
+	// MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: mainList; }
 	
 	}
 

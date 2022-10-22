@@ -143,7 +143,7 @@ id: root
         }
     }
 
-    MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: root; }
+    // MouseArea { width: parent.width ; height: parent.height ; onWheel: {} drag.target: root; }
 	
 	// Helpbar buttons
     ListModel {
